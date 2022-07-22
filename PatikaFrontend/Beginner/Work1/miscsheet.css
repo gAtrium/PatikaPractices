@@ -1,0 +1,68 @@
+.hcenter {
+    justify-content: center;
+
+}
+
+.hcenter>*{
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: max-content;
+}
+
+.rainbow {
+    animation-duration: 1s;
+    animation-name: rainbowtext;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+.OAAAAA {
+    animation-name: AAAAAAAAAAAAAAAAAA;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.AAAAAO{
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    
+    animation-name: AAAAAAAAAAAAAAAAAA;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rainbowtext {
+    0% {
+        color: red;
+    }
+    33% {
+        color: green;
+    }
+    66% {
+        color: blue;
+    }
+    99% {
+        color: brown;
+    }
+}
+
+@keyframes AAAAAAAAAAAAAAAAAA {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes OOOOOOOOOOOOOOOOOOO {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,101 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bass Shop Fan Page</title>
+    <link rel="stylesheet" href="miscsheet.css">
+    <style>
+        #bodycontent {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+        }
+
+        #linkdir {
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10%;
+        }
+
+        #linkdir>* {
+            width: auto;
+        }
+
+        #displaypage {
+            margin-top: 28px;
+            flex-grow: 1;
+            opacity: 0;
+        }
+    </style>
+
+    <script>
+        function navigateTo(index) {
+            switch (index) {
+                case 1:
+                    _nav("whyiloveprobassshop.html");
+                    break;
+                case 2:
+                    _nav("whyihatemywife.html");
+                    break;
+                case 3:
+                    _nav("myfavoritebassshopitems.html");
+                    break;
+            }
+        }
+        var loadtime= 0;
+
+        function _nav(uri) {
+            var elem = document.getElementById("displaypage");
+            elem.style.animationName="AAAAAAAAAAAAAAAAAA";
+            elem.style.animationDuration="0.5s";
+            elem.style.animationDirection="normal";
+            elem.style.animationFillMode="forwards";
+            setTimeout(__nav,500,uri);
+        }
+
+        function __nav(uri){
+            document.getElementById("displaypage").setAttribute("src",uri);
+            loadtime = Date.now();
+        }
+
+
+        function loaded(){
+            if(Date.now() - loadtime < 500){
+                setTimeout(loaded, 500 - (Date.now() - loadtime));
+                return;
+            }
+            var elem = document.getElementById("displaypage");
+            elem.style.animationName="OOOOOOOOOOOOOOOOOOO";
+            elem.style.animationDuration="0.5s";
+            elem.style.animationDirection="forwards";
+            elem.style.animationFillMode="forwards";
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="bodycontent">
+        <div class="hcenter">
+            <h1 class="rainbow">Welcome to my Bass Shop Fan Page</h1>
+            <h3>(I hate my wife)</h3>
+            <img src="https://www.bitrefill.com/content/cn/b_rgb%3AFFFFFF%2Cc_pad%2Ch_800%2Cw_800/v1544016265/bassproshops.jpg"
+                alt="super cool logo" height="150px" width="150px">
+        </div>
+        <div id="linkdir">
+            <a href="#" onclick="navigateTo(1);" rel="noopener noreferrer">Why I love Pro Bass Shop</a>
+            <a href="#" onclick="navigateTo(2);" rel="noopener noreferrer">Why I hate my wife</a>
+            <a href="#" onclick="navigateTo(3);" rel="noopener noreferrer">Favorite Pro Bass Shop items</a>
+        </div>
+        <iframe id="displaypage" src="whyiloveprobassshop.html" onload="loaded()" frameborder="1px" width="100%" height="auto">
+            </script>
+        </iframe>
+    </div>
+</body>
+
+</html>
