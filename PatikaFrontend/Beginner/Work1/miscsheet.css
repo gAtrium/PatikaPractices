@@ -19,22 +19,6 @@
 
 }
 
-.OAAAAA {
-    animation-name: AAAAAAAAAAAAAAAAAA;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-.AAAAAO{
-    animation: name duration timing-function delay iteration-count direction fill-mode;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    
-    animation-name: AAAAAAAAAAAAAAAAAA;
-    animation-duration: 0.5s;
-    animation-direction: reverse;
-    animation-fill-mode: forwards;
-}
-
 @keyframes rainbowtext {
     0% {
         color: red;
