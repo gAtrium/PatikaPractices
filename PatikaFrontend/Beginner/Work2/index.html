@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Googel back in 19 something</title>
+    <style>
+        body{
+            background-color: white;
+        }
+        .copyleft {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .searchbox {
+            margin: auto;
+            margin-top: 10%;
+            width: 30%;
+            justify-content: center;
+            text-align: center;
+        }
+        .searchbox>input {
+            width: 100%;
+        }
+        .linkcategories {
+            display:flex;
+            flex-flow: row;
+            gap: 5px;
+            height: 12%;
+            margin-top: 20px;
+        }
+        .linkcategories>* {
+            display: flex;
+            flex-direction: column;
+            border-style: solid;
+            justify-content: center;
+            align-items: center;
+            border-width: 1px;
+            text-align: center;
+        }
+        .linkcategories>:first-child{
+            background-color: lightblue;
+            flex-basis: 35%;
+        }
+        .linkcategories>:nth-child(2){
+            background-color: beige;
+            flex-basis: 20%;
+        }
+        .linkcategories>:nth-child(3){
+            background-color:rgb(192, 133, 133);
+            flex-basis: 45%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="searchbox">
+            <img src="https://web.archive.org/web/19990504112211im_/http://www.google.com/google.jpg" alt=""><br>
+            <span>Search the web using Google!</span>
+            <input type="text">
+            <div class="searchbox_buttons">
+                <button>Google Search</button>
+                <button>I'm feeling lucky, punk</button>
+            </div>
+        </div>
+    </div>
+    <div class="linkcategories">
+        <div>
+            <span>Special Searches</span><br/>
+            <a href="#">Stanford Search</a><br/>
+            <a href="https://www.lkd.org.tr/">Linux Search</a>
+        </div>
+        <div>
+            <a href="#" onclick="alert('No help is coming')">Help!</a><br/>
+            <a href="https://www.youtube.com/watch?v=mVQ_lNiWJoE">About Google!</a><br>
+            <a href="https://www.youtube.com/watch?v=mVQ_lNiWJoE">Company Info</a><br>
+            <a href="#">Google! Logos</a>
+        </div>
+        <div>
+            <span>Get Google!</span><br>
+            <span>updates monthly:</span>
+            <input type="text" placeholder="your e-mail">
+            <div>
+                <button>Subscribe</button>
+                <a href="#">Archive</a>
+            </div>
+        </div>
+    </div>
+    <div class="copyleft">
+        <span ">Copyright yadda yadda yadda</span>
+    </div>
+</body>
+</html>
