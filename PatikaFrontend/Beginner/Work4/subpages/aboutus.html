@@ -1,0 +1,135 @@
+<html lang="en" style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="../neonflicker.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../SharedFonts.css">
+
+
+    <style>
+         @keyframes reveal {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes revealo {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes revealh {
+            from {
+                width: 0px;
+                opacity: 0;
+            }
+            to {
+                width: 100%;
+                opacity: .4;
+            }
+        }
+
+
+        .square:before {
+            content: "";
+            display: block;
+            /* initial ratio of 1:1*/
+        }
+
+        .step>div {
+            border-radius: 20px;
+            animation-name: reveal;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards;
+            opacity: 0;
+
+        }
+
+        .step>div>div {
+            background-color: transparent;
+            height: 50% !important;
+        }
+        hr {
+            animation-name: revealh;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-delay: 4s;
+            width: 0px;
+            opacity: 0;
+        }
+        h5,h1,p {
+            font-family: 'Mukta', sans-serif;
+        }
+        .desc {
+            animation-name: revealo;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-delay: 4.3s;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body style="background-color: #000 !important;"
+    class="d-flex justify-content-center flex-column">
+    <div class="container-fluid flex-grow-1 justify-content-center" style="color: white;">
+        <div class="step row flex-grow-1 align-items-center justify-content-around text-center">
+            <div class="col-3 square " style="animation-delay: 1s;">
+                <div class="card">
+                    <img class="card-img-top" src="../assets/bolt.svg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Interject</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 square" style="animation-delay: 2s;">
+                <div class="card">
+                    <img class="card-img-top" src="../assets/eye.svg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Monitor</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 square" style="animation-delay: 3s;">
+                <div class="card">
+                    <img class="card-img-top" src="../assets/skull.svg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Exploit</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <hr>
+        </div>
+        <div class="row desc flex-grow-1">
+            <h1>Who are we?</h1>
+            <p>The question should rather be "What do we do?" Though our methods of obtaining intelligence are questionable it is certain that with information one shall be victorious. We employ various IME protocols in target organizations and groups to ensure the upper hand in a possible conflict.</p>
+            <br>
+            <h1>What are our methods of obtaining data?</h1>
+            <p>Often times we make use of our mass surveillance software or pull information from already existing databases in our grasp.</p>
+            <h1>Other motivations besides obtaining data?</h1>
+            <p>As long as you have the cash, you have it. AI, advertising, manipulation, you name it.</p>
+        </div>
+    </div>
+</body>
+
+</html>

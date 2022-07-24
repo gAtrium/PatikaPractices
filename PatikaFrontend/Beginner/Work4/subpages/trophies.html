@@ -1,0 +1,184 @@
+<html lang="en" style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="../neonflicker.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../SharedFonts.css">
+
+
+    <style>
+        @keyframes reveal {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        .card {
+            background-color: #000;
+            color: white;
+        }
+
+        body {
+            font-family: 'Mukta', sans-serif;
+        }
+
+        .col-3 {
+            animation-name: reveal;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            animation-duration: 1s;
+            opacity: 0;
+        }
+
+        .container-fluid>:nth-child(1)>:nth-child(2) {
+            animation-delay: 100ms;
+        }
+        .container-fluid>:nth-child(1)>:nth-child(3) {
+            animation-delay: 200ms;
+        }
+        .container-fluid>:nth-child(2)>:nth-child(1) {
+            animation-delay: 300ms;
+        }
+        .container-fluid>:nth-child(2)>:nth-child(2) {
+            animation-delay: 400ms;
+        }
+        .container-fluid>:nth-child(2)>:nth-child(3) {
+            animation-delay: 500ms;
+        }
+        .container-fluid>:nth-child(3)>:nth-child(1) {
+            animation-delay: 600ms;
+        }
+        .container-fluid>:nth-child(3)>:nth-child(2) {
+            animation-delay: 700ms;
+        }
+        .container-fluid>:nth-child(3)>:nth-child(3) {
+            animation-delay: 800ms;
+        }
+    </style>
+
+    <script>
+        const random = (length = 8) => {
+            return Math.random().toString(16).substr(4, length);
+        }; //kindly borrowed from https://attacomsian.com/blog/javascript-generate-random-string
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+        }
+
+
+        glitchthese = [];
+        window.onload = function () {
+            glitchthese = document.getElementsByClassName("glitchtext");
+            glitchem();
+        }
+        function glitchem() {
+            for (i = 0; i < glitchthese.length; i++) {
+                glitchthese[i].textContent = random(Math.random() * 16);
+            }
+            setTimeout(glitchem, getRandomInt(100, 600));
+        }
+
+    </script>
+</head>
+
+<body style="background-color: #000 !important; width: 100%;">
+    <div class="container-fluid">
+        <div class="row mt-5 justify-content-around">
+            <div class="col-3">
+                <div class="card text-center">
+                    <img class="card-img-top" src="../assets/computer.svg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">First public domain</h5>
+                        <p class="card-text">Services opened to the rest of world</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-center">
+                    <img class="card-img-top" src="../assets/building.svg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">HQ</h5>
+                        <p class="card-text">First headquarter built at SITE-1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-center">
+                    <img class="card-img-top" src="../assets/app.svg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Andromeda-1</h5>
+                        <p class="card-text">First mobile device to be released into public</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 justify-content-around">
+            <div class="col-3">
+                <div class="card text-center">
+                    <img class="card-img-top" src="../assets/bug.svg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Project "Mindflayer"</h5>
+                        <p class="card-text">Digital recon team established</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-center">
+                    <img class="card-img-top" src="../assets/eye.svg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Mass Data</h5>
+                        <p class="card-text">Biggest amount of data inflow & sources to be ever recorded</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-center">
+                    <img class="card-img-top" src="../assets/fist.svg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Dominating</h5>
+                        <p class="card-text">Market share dominance established</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 justify-content-around">
+            <div class="col-3">
+                <div class="card text-center">
+                    <img class="card-img-top" src="../assets/ai.svg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Alive</h5>
+                        <p class="card-text">An Artificial intelligence trained from the greatest dataset in mankind</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-center">
+                    <img class="card-img-top glitchanim" style="transform: skewY(0);" src="../assets/fetus.svg"
+                        alt="Card image cap">
+                    <div class="card-body glitchanim2">
+                        <h5 class="card-title glitchtext"></h5>
+                        <p class="card-text glitchtext"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

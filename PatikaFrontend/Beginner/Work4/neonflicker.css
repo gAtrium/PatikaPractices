@@ -1,0 +1,96 @@
+@keyframes neonflick1 {
+    0%, 32%,34%, 74%,76%, 81%,83%, 97%,99% {
+        opacity: 1;
+    }
+    33%, 75%, 82%, 98% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes neonflick2 {
+    0%, 21%,23%, 64% ,66% {
+        opacity: 1;
+    }
+    22%, 65%{
+        opacity: 0.4;
+    }
+}
+
+@keyframes neonflick3 {
+    0%, 29.8%,30.2% {
+        opacity: 1;
+    }
+    30%{
+        opacity: 0.4;
+    }
+}
+
+@keyframes linger {
+    0%{
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 0.5;
+    }
+    
+}
+
+@keyframes glitch1 {
+    0%, 32%,34%, 74%,76%, 81%,83%, 97%,99% {
+        opacity: 0.2;
+        transform: skewX(0);
+    }
+    33%, 75%, 82%, 98% {
+        transform: skewX(30deg);
+        opacity: 0.05; /*we can rely on browser based floating point errors to create a pristine looking glitch, that is really a glitch*/
+    }
+}
+
+@keyframes glitch2op {
+    0%, 32%,34%, 74%,76%, 81%,83%, 97%,99% {
+        opacity: 0;
+    }
+    33%, 75%, 82%, 98% {
+        opacity: 1;
+    }
+}
+
+@keyframes glitch2skew {
+    0%, 32%,34% {
+        transform: skewX(60deg);
+    }
+    74%,76% {
+        transform: skewX(-30deg);
+    }
+    81%,83% {
+        transform: skewX(10deg);
+    }
+    97%,99% {
+        transform: skewX(-60deg);
+    }
+    33%, 75%, 82%, 98% {
+        transform: skewX(0);
+    }
+}
+.nf1 {
+    animation: neonflick1 5s linear infinite;
+}
+.nf2 {
+    animation: neonflick2 4s linear infinite;
+}
+.nf3 {
+    animation: neonflick2 10s linear infinite;
+}
+.lingeranim {
+    animation: linger 4s ease-in-out infinite;
+}
+.glitchanim {
+    animation: glitch1 2s linear infinite;
+}
+
+.glitchanim2 {
+    animation: glitch2op 4s linear infinite, glitch2skew 3s linear infinite;
+}
