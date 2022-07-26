@@ -75,6 +75,20 @@
         transform: skewX(0);
     }
 }
+
+@keyframes reveal {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
 .nf1 {
     animation: neonflick1 5s linear infinite;
 }
