@@ -154,7 +154,6 @@ button.ref:hover {
 }
 
 .content>.card>.card-header>span {
-
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -194,6 +193,16 @@ button.ref:hover {
 .rightp>:nth-child(1)>.card-title>div>span>button{
   color:#17A2B8;
   border-color:#17A2B8;
+}
+
+.rightp>.mt-3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.rightp>.mt-3>div {
+  width: fit-content;
 }
 
 
