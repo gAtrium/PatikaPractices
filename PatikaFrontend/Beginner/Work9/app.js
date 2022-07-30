@@ -91,7 +91,7 @@ var menuelem = null;
 const menuitemidp = "menuitem-";
 window.onload = () => {
   document.getElementsByTagName("h2")[0].innerText = "Asian Kitchen's Menu";
-
+  document.title = "Asian Kitchen"
   menu.forEach((vl) => {
     if (!categories.includes(vl.category)) categories.push(vl.category);
   });
